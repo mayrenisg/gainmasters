@@ -1,0 +1,121 @@
+@media (max-width: 480px) {
+    .seccion {
+      flex-direction: column;
+    }
+  
+    .lado-izquierdo, .lado-derecho {
+      display: none; /* Oculta los lados izquierdo y derecho en pantallas pequeñas */
+    }
+  
+    .medio {
+      flex: 0 0 100%;
+      flex-direction: column;
+    }
+  
+    .caja-central {
+      flex-direction: column;
+    }
+  
+    .lado-izquierdo-caja, .lado-derecho-caja {
+      flex: 1 1 100%;
+      padding: 0;
+    }
+  
+    .lado-derecho-caja {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .lado-izquierdo-caja img {
+      margin-bottom: 10px;
+      height: 300px;
+    }
+  
+    .lado-derecho-caja img {
+      margin-top: 10px;
+    }
+  }
+
+
+  @media (min-width:481px) and (max-width: 900px) {
+    .lado-izquierdo, .lado-derecho {
+      display: none; /* Oculta los lados izquierdo y derecho en tablets */
+    }
+  
+    .medio {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .caja-central {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .lado-izquierdo-caja {
+      flex: 1;
+      padding: 0;
+    }
+  
+    .lado-izquierdo-caja img {
+      width: 500px;
+      height: 350px;
+    }
+  
+    .lado-derecho-caja {
+      flex: 1;
+      padding: 0 10px;
+    }
+  
+    .lado-derecho-caja p {
+      width: 100%;
+    }
+  
+    .lado-derecho-caja img {
+      display: none; /* Oculta la tercera imagen en tablets */
+    }
+  }
+
+
+
+  /* Estilos generales para tarjetas */
+.card {
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+  }
+  .col-md-4 sm-6{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Estilos para pantallas menores de 468px */
+  @media (max-width: 468px) {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .blog-content .row {
+      display: flex;
+      flex-direction: column; /* Alinea las tarjetas en una columna */
+      align-items: center; /* Centra las tarjetas horizontalmente */
+    }
+  
+    .col-md-4,
+    .col-sm-6 {
+      flex: 0 1 auto; /* Ajusta la flexibilidad de los elementos */
+      width: 100%; /* Asegura que las tarjetas ocupen el ancho completo */
+      max-width: 300px; /* Limita el ancho máximo de las tarjetas para evitar que sean demasiado grandes */
+      margin: 10px; /* Agrega margen alrededor de las tarjetas */
+    }
+  
+    .card {
+      width: 100%; /* Asegura que la tarjeta ocupe el ancho completo de su contenedor */
+      box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    }
+  }
